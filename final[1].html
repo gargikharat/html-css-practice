@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Notice Board - Vidyalankar Polytechnic</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Notice Board Container */
+        .notice-board {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Header */
+        header {
+            padding: 15px;
+            background: #ff5733;
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header h2 {
+            margin: 5px 0 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* Notices Section */
+        .notices-container {
+            overflow: hidden;
+            height: 400px; /* Fixed height for scrolling */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .notices {
+            animation: scroll-up 10s linear infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Notice Card */
+        .notice {
+            width: 95%;
+            background: #222;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #ff5733;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .notice h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #ffcc00;
+        }
+
+        .notice p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .notice .date {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        /* Scrolling Animation */
+        @keyframes scroll-up {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .notice-board { width: 98%; }
+            .notice h3 { font-size: 20px; }
+            .notice p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notice-board">
+        <header>
+            <h1>📢 Digital Notice Board</h1>
+            <h2>Vidyalankar Polytechnic</h2>
+        </header>
+
+        <div class="notices-container">
+            <div class="notices">
+                <div class="notice">
+                    <h3>⚡ Hackathon Event</h3>
+                    <p>Join us for the Industrial Hackathon on March 28-29, 2025.</p>
+                    <span class="date">Posted: March 25, 2025</span>
+                </div>
+
+                <div class="notice">
+                    <h3>🎓 Exam Schedule</h3>
+                    <p>The final semester exams will start from April 10, 2025.</p>
+                    <span class="date">Posted: March 24, 2025</span>
+                </div>
+
+                <div class="notice">
+                    <h3>📜 Project Submissions</h3>
+                    <p>All final-year students must submit their projects by April 5, 2025.</p>
+                    <span class="date">Posted: March 23, 2025</span>
+                </div>
+
+                <div class="notice">
+                    <h3>🎭 Cultural Fest 2025</h3>
+                    <p>Get ready for the biggest cultural event of the year on April 15, 2025.</p>
+                    <span class="date">Posted: March 22, 2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
